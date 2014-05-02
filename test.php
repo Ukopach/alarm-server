@@ -1,4 +1,5 @@
 <?
+//some comment to test git
 require_once 'rpc/jsonrpcphp/includes/jsonRPCClient.php';
 $myExample = new jsonRPCClient('http://192.168.0.33/alarm/home/pi/workspace/alarm/rpc.php');
 
