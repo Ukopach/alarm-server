@@ -1,8 +1,12 @@
 <?php
-require_once 'rpc/jsonrpcphp/includes/jsonRPCServer.php';
-require 'example.php';
+require_once 'includes/jsonrpcphp/includes/jsonRPCServer.php';
+require 'services/AlarmService.php';
 
-$myExample = new example();
-jsonRPCServer::handle($myExample)
-    or print 'no requestkdksdjlkj';
+$alarmService = new AlarmService ();
+jsonRPCServer::handle($alarmService) 
+    or 
+
+	print 'no request';
+	print $_SERVER['REQUEST_METHOD'];
+	print $_SERVER['CONTENT_TYPE'];
 ?>

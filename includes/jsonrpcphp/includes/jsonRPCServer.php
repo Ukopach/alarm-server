@@ -39,8 +39,8 @@ class jsonRPCServer {
 		// checks if a JSON-RCP request has been received
 		if (
 			$_SERVER['REQUEST_METHOD'] != 'POST' || 
-			empty($_SERVER['CONTENT_TYPE']) ||
-			$_SERVER['CONTENT_TYPE'] != 'application/json'
+			empty($_SERVER['CONTENT_TYPE']) 
+			//|| $_SERVER['CONTENT_TYPE'] != 'application/json'
 			) {
 		// This is not a JSON-RPC request
 			return false;
